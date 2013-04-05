@@ -13,7 +13,7 @@
    Shared Styles
 ----------------------------------------- */
 body {
-	background-color:#fff;
+	background-color:#136e8e;
 }
 h3 {
 	display:inline;
@@ -23,25 +23,62 @@ h3 {
 }
 #top-nav-bar {
 	background-color: #333333;
+	opacity:.7;
 	height:92px;
 }
-.nav-bar {
+#top-nav-bar .nav-bar {
 	display:inline;
 	float:right;
 	background:none;
 	border:none;
+	opacity:1;
+	margin-top:20px;
 }
-.nav-bar li {
+#top-nav-bar .nav-bar li {
 	border:none;
 }
-.reveal-modal {
-	width:940px;
-	margin-left:-455px;
+/*Nav inside STORIES tray*/
+.stories-inner-nav-row {
+	background:orange;	
+	position:relative;
+	top:-20px;
+}
+.stories-inner-nav {
+	padding-left:30%;
+}
+.stories-inner-nav .nav-bar{
+	display:inline;
+	background: none;
+	border:none;
+	opacity:1;
+	position:relative;
+	padding:2px;
+}
+.stories-inner-nav > .nav-bar > li {
+	border:none;
+}
+.stories-inner-nav > .nav-bar > li > a{
+	font-size:10px;
+	padding:0 5px;
+	line-height:15px;
+}
+
+.reveal-modal.xlarge{
+	width:100%;
 	top:92px;
+	left:0px;
+	margin-left:0px;
+	background:#333;
+	opacity:.85;
+	
+}
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */
-
+.body-container {
+	background: #fff;
+	height:900px;
+}
 
 
 
