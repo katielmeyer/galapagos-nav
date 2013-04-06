@@ -16,52 +16,91 @@
   <link rel="stylesheet" href="stylesheets/app.css">
   <script src="javascripts/jquery.js"></script>
   <script src="javascripts/modernizr.foundation.js"></script>
-	<script type="text/javascript">
-      $(document).ready(function() {
-        $("#buttonForModal").click(function() {
-          $("#nav-modal").reveal();
-        });
-      });
-    </script>
+  <script>
+	  $(function () {
+		$('.click-nav > ul').toggleClass('no-js js');
+		$('.click-nav .js ul').hide();
+		$('.click-nav .js').click(function(e) {
+			$('.click-nav .js ul').slideToggle(200);
+			$('.clicker').toggleClass('active');
+			e.stopPropagation();
+		});
+		$(document).click(function() {
+			if ($('.click-nav .js ul').is(':visible')) {
+				$('.click-nav .js ul', this).slideUp();
+				$('.clicker').removeClass('active');
+			}
+		});
+	});
+	</script>
+
 </head>
 <body>
 
 <div id="top-nav-bar">
-  <div class="row">
-    <div class="twelve columns">
+    <div class="row">
+      <div class="twelve columns click-nav">
           	<h3>Living Galapagos logo</h3>
-            <ul class="nav-bar">
-              <li>
-                <a href="#" data-reveal-id="nav-modal">STORIES</a>
-              </li>
-              <li><a href="#">ISSUES</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">SPANISH</a></li>
+            <ul class="nav-bar no-js">
+                <li>
+                  <a href="#" class="clicker">STORIES</a>
+                      <ul class="nav-bar-dropdown">
+                        <div class="row">
+                          <div class="twelve columns stories-inner-nav-row">
+                              <div class="stories-inner-nav">
+                                  <ul class="nav-bar">
+                                      <li class="tab-one"><a href="#featured">FEATURED</a></li>
+                                      <li class="tab-two"><a href="#social">SOCIAL</a></li>
+                                      <li class="tab-three"><a href="#environmental">ENVIRONMENTAL</a></li>
+                                      <li class="tab-four"><a href="#economic">ECONOMIC</a></li>
+                                      <li class="tab-five last"><a href="#all">ALL</a></li>
+                                   </ul>
+                              </div>
+                              <!--end stories-inner-nav-->
+                          </div>
+                          <!--end twelve columns stories-inner-nav-row
+                          <div class="twelve columns">
+                               <div class="tab-list-wrap">
+                                  <ul id="featured">
+                                      <img src="images/video-thumbnail.png"/>
+                                  </ul>
+                                  <ul id="social">
+                                  </ul>
+                                  <ul id="environmental">
+                                  </ul>
+                                  <ul id="economic">
+                                  </ul>
+                                  <ul id="all">
+                                  </ul>
+                              </div>
+                              <!--end tab-list-wrap
+                          </div>
+                          <!--end twelve columns-->
+                      </div>
+                      <!--end row-->
+                      </ul>
+                      <!--end ul flyout-->
+                </li>
+                <li><a href="#">ISSUES</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">SPANISH</a></li>
             </ul>
-
-     </div>
-  </div>
-  </div>
-  <div class="row body-container">
-  	<div class="twelve columns">
+            <!--end ul nav-bar-->
+      </div>
+      <!--end twelve columns-->
     </div>
-  </div>
+    <!--end row-->
+</div>
+<!--end top-nav-bar-->
+<div class="row body-container">
+    <div class="twelve columns">
+    </div>
+    <!--end twelve columns-->
+</div>
+<!--end row body-container-->
 
-    <div id="nav-modal" class="reveal-modal xlarge">
-    	<div class="row">
-        <div class="twelve columns stories-inner-nav-row">
-    	<div class="stories-inner-nav">
-            	<ul class="nav-bar">
-                	<li><a href="#">FEATURED</a></li>
-                    <li><a href="#">SOCIAL</a></li>
-                    <li><a href="#">ENVIRONMENTAL</a></li>
-                    <li><a href="#">ECONOMIC</a></li>
-                    <li><a href="#">ALL</a></li>
-                    </ul>
-            </div>
-        </div>
-        </div>
+    	
     </div>
   <!-- Included JS Files (Uncompressed) -->
   <!--<script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script><script src="javascripts/jquery.foundation.forms.js"></script><script src="javascripts/jquery.foundation.reveal.js"></script><script src="javascripts/jquery.foundation.orbit.js"></script><script src="javascripts/jquery.foundation.navigation.js"></script><script src="javascripts/jquery.foundation.buttons.js"></script><script src="javascripts/jquery.foundation.tabs.js"></script><script src="javascripts/jquery.foundation.tooltips.js"></script><script src="javascripts/jquery.foundation.accordion.js"></script><script src="javascripts/jquery.placeholder.js"></script><script src="javascripts/jquery.foundation.alerts.js"></script><script src="javascripts/jquery.foundation.clearing.js"></script><script src="javascripts/jquery.foundation.magellan.js"></script><script src="javascripts/jquery.foundation.joyride.js"></script><script src="javascripts/jquery.foundation.topbar.js"></script>-->

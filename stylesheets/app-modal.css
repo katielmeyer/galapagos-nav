@@ -39,8 +39,8 @@ h3 {
 }
 /*Nav inside STORIES tray-------------------------*/
 
-.nav-bar-dropdown{
-	width:800px;
+.reveal-modal.xlarge{
+	width:100%;
 	top:92px;
 	left:0px;
 	margin-left:0px;
@@ -80,15 +80,10 @@ h3 {
 	height:900px;
 }
 
+
+
 /* -----------------------------------------
    Page Name 2
 ----------------------------------------- */
-.click-nav ul {position:relative;}
-.click-nav ul li {position:relative;list-style:none;cursor:pointer;}
-.click-nav ul .clicker {position:relative;}
-.click-nav ul li a {transition:background-color 0.2s ease-in-out;-webkit-transition:background-color 0.2s ease-in-out;
--moz-transition:background-color 0.2s ease-in-out;text-decoration:none;}
 
-/* Fallbacks */
-.click-nav .no-js ul {display:none;}
-.click-nav .no-js:hover ul {display:block;}
+
