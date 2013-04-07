@@ -17,23 +17,12 @@
   <script src="javascripts/jquery.js"></script>
   <script src="javascripts/modernizr.foundation.js"></script>
   <script>
-	  $(function () {
-		$('.click-nav > ul').toggleClass('no-js js');
-		$('.click-nav .js ul').hide();
-		$('.click-nav .js').click(function(e) {
-			$('.click-nav .js ul').slideToggle(200);
-			$('.clicker').toggleClass('active');
-			e.stopPropagation();
+  		$(document).ready(function() {
+			$(".clicker").click(function(){
+			  $(".stories-flyout-container").toggle();
+			});
 		});
-		$(document).click(function() {
-			if ($('.click-nav .js ul').is(':visible')) {
-				$('.click-nav .js ul', this).slideUp();
-				$('.clicker').removeClass('active');
-			}
-		});
-	});
-	</script>
-
+  </script>
 </head>
 <body>
 
@@ -44,42 +33,6 @@
             <ul class="nav-bar no-js">
                 <li>
                   <a href="#" class="clicker">STORIES</a>
-                      <ul class="nav-bar-dropdown">
-                        <div class="row">
-                          <div class="twelve columns stories-inner-nav-row">
-                              <div class="stories-inner-nav">
-                                  <ul class="nav-bar">
-                                      <li class="tab-one"><a href="#featured">FEATURED</a></li>
-                                      <li class="tab-two"><a href="#social">SOCIAL</a></li>
-                                      <li class="tab-three"><a href="#environmental">ENVIRONMENTAL</a></li>
-                                      <li class="tab-four"><a href="#economic">ECONOMIC</a></li>
-                                      <li class="tab-five last"><a href="#all">ALL</a></li>
-                                   </ul>
-                              </div>
-                              <!--end stories-inner-nav-->
-                          </div>
-                          <!--end twelve columns stories-inner-nav-row
-                          <div class="twelve columns">
-                               <div class="tab-list-wrap">
-                                  <ul id="featured">
-                                      <img src="images/video-thumbnail.png"/>
-                                  </ul>
-                                  <ul id="social">
-                                  </ul>
-                                  <ul id="environmental">
-                                  </ul>
-                                  <ul id="economic">
-                                  </ul>
-                                  <ul id="all">
-                                  </ul>
-                              </div>
-                              <!--end tab-list-wrap
-                          </div>
-                          <!--end twelve columns-->
-                      </div>
-                      <!--end row-->
-                      </ul>
-                      <!--end ul flyout-->
                 </li>
                 <li><a href="#">ISSUES</a></li>
                 <li><a href="#">ABOUT</a></li>
@@ -93,6 +46,43 @@
     <!--end row-->
 </div>
 <!--end top-nav-bar-->
+
+<div class="row stories-flyout-container">
+<div class="row">
+    <div class="twelve columns">
+        <div class="stories-inner-nav">
+            <ul class="nav-bar">
+                <li class="tab-one"><a href="#featured">FEATURED</a></li>
+                <li class="tab-two"><a href="#social">SOCIAL</a></li>
+                <li class="tab-three"><a href="#environmental">ENVIRONMENTAL</a></li>
+                <li class="tab-four"><a href="#economic">ECONOMIC</a></li>
+                <li class="tab-five last"><a href="#all">ALL</a></li>
+             </ul>
+        </div>
+        <!--end stories-inner-nav-->
+    </div>
+    <!--end twelve columns-->
+    <div class="twelve columns stories-inner-content-row">
+         <div class="tab-list-wrap stories-inner-content">
+            <ul id="featured">
+                <img src="images/video-thumbnail.png"/>
+            </ul>
+            <ul id="social">
+            </ul>
+            <ul id="environmental">
+            </ul>
+            <ul id="economic">
+            </ul>
+            <ul id="all">
+            </ul>
+        </div>
+        <!--end tab-list-wrap-->
+    </div>
+    <!--end twelve columns-->
+</div>
+</div>
+<!--end row stories-flyout-->
+
 <div class="row body-container">
     <div class="twelve columns">
     </div>
