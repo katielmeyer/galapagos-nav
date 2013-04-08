@@ -17,6 +17,9 @@
   <script src="javascripts/jquery.js"></script>
   <script src="javascripts/modernizr.foundation.js"></script>
   <script>
+  		$(window).load(function() {
+		   $('#featuredContent').orbit({ fluid: '16x6' });
+	   });
   		$(document).ready(function() {
 			var openDiv;
 			function toggleDiv(divID) {
@@ -65,34 +68,35 @@
 <div class="row">
     <div class="twelve columns">
         <div class="stories-inner-nav">
-            <ul class="nav-bar">
-                <li class="tab-one"><a href="#featured">FEATURED</a></li>
-                <li class="tab-two"><a href="#social">SOCIAL</a></li>
-                <li class="tab-three"><a href="#environmental">ENVIRONMENTAL</a></li>
-                <li class="tab-four"><a href="#economic">ECONOMIC</a></li>
-                <li class="tab-five last"><a href="#all">ALL</a></li>
+            <dl class="tabs">
+                <dd class="active"><a href="#featured">FEATURED</a></dd>
+                <dd><a href="#social">SOCIAL</a></dd>
+                <dd><a href="#environmental">ENVIRONMENTAL</a></dd>
+                <dd><a href="#economic">ECONOMIC</a></dd>
+                <dd><a href="#all">ALL</a></dd>
+             </dl>
+             <ul class="tabs-content">
+             	<li class="active" id="featuredTab">
+                    <div id="featuredContent">
+                      <div>
+                        <img src="images/video-thumbnail.png"/>
+                      </div>
+                      <div>
+                        <img src="images/video-thumbnail.png"/>
+                      </div>
+                      <div>
+                        <img src="images/video-thumbnail.png"/>
+                      </div>
+                    </div>
+                </li>
+                <li id="socialTab">social</li>
+                <li id="environmentalTab">environmental</li>
+                <li id="economicTab">economic</li>
+                <li id="allTab">all</li>
              </ul>
         </div>
         <!--end stories-inner-nav-->
     </div>
-    <!--end twelve columns-->
-    <div class="twelve columns stories-inner-content-row">
-         <div class="tab-list-wrap stories-inner-content">
-            <ul id="featured">
-                <img src="images/video-thumbnail.png"/>
-            </ul>
-            <ul id="social">
-            </ul>
-            <ul id="environmental">
-            </ul>
-            <ul id="economic">
-            </ul>
-            <ul id="all">
-            </ul>
-        </div>
-        <!--end tab-list-wrap-->
-    </div>
-    <!--end twelve columns-->
 </div>
 </div>
 <!--end row stories-flyout-->

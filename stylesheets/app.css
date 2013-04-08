@@ -36,6 +36,9 @@ h3 {
 #top-nav-bar .nav-bar li {
 	border:none;
 }
+.nav-bar > li > a:active {
+	background:none;
+}
 /* -----------------------------------------
    STORIES flyout tray
 ----------------------------------------- */
@@ -52,9 +55,8 @@ h3 {
 /*Inner navigation tabs-------------------------*/
 .stories-inner-nav {
 	position:relative;
-	padding-left:40%;
 	margin-left:0px;
-	background:rgba(51,51,51,.95);
+	background:rgba(51,51,51,.85);
 }
 .stories-inner-nav .nav-bar{
 	display:inline;
@@ -78,11 +80,34 @@ h3 {
 .stories-inner-content-row {
 }
 .stories-inner-content {
-	background:rgba(51,51,51,.85);
+	
 }
 .stories-inner-content img {
 	padding-top:68px;
 	padding-left:30%;
+}
+/*tabs*/
+.tabs {
+	border:none;
+	background:rgba(51,51,51,.95);
+	padding-left:35%;
+}
+ul.tabs-content {
+	padding-left:30%;	
+}
+.tabs dd.active, .tabs li.active {
+	border:none;
+	background:none;
+	margin-top:inherit;
+}
+.tabs dd.active a, li.active a {
+	color:#ffffff;
+	background:none;
+	border:none;
+	font-weight:normal;
+}
+.tabs dd a, .tabs li a {
+	color:#999999;	
 }
 /* -----------------------------------------
    Page Name 1
