@@ -18,9 +18,23 @@
   <script src="javascripts/modernizr.foundation.js"></script>
   <script>
   		$(document).ready(function() {
-			$(".clicker").click(function(){
-			  $(".stories-flyout-container").toggle();
+			var openDiv;
+			function toggleDiv(divID) {
+				$(divID).toggle(/*function() {
+					openDiv = $(this).is(':visible') ? divID : null;
+				}*
+				lets you click outside the flyout to close but causes silly animation for some reason. needs testing*/);
+			}
+			$(document).click(function(e) {
+				if (!$(e.target).closest(openDiv).length) {
+					toggleDiv(openDiv);
+				}
 			});
+			
+			$(".clicker").click(function(){
+			  toggleDiv('.stories-flyout-container');
+			});
+
 		});
   </script>
 </head>
