@@ -18,15 +18,14 @@
   <script src="javascripts/modernizr.foundation.js"></script>
   <script>
   		$(window).load(function() {
-		   $('#featuredContent').orbit({ fluid: '16x6' });
+		   $('#featuredContent').orbit({ fluid: '16x6', animation: 'horizontal-slide', timer: 'false'});
 	   });
   		$(document).ready(function() {
 			var openDiv;
 			function toggleDiv(divID) {
-				$(divID).toggle(/*function() {
+				$(divID).slideToggle(300, function() {
 					openDiv = $(this).is(':visible') ? divID : null;
-				}*
-				lets you click outside the flyout to close but causes silly animation for some reason. needs testing*/);
+				});
 			}
 			$(document).click(function(e) {
 				if (!$(e.target).closest(openDiv).length) {
@@ -44,7 +43,6 @@
 <body>
 
 <div id="top-nav-bar">
-    <div class="row">
       <div class="twelve columns click-nav">
           	<h3>Living Galapagos logo</h3>
             <ul class="nav-bar no-js">
@@ -54,52 +52,80 @@
                 <li><a href="#">ISSUES</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li><a href="#">BLOG</a></li>
-                <li><a href="#">SPANISH</a></li>
+                <li class="nav-bar-last"><a href="#">SPANISH</a></li>
             </ul>
             <!--end ul nav-bar-->
       </div>
       <!--end twelve columns-->
-    </div>
-    <!--end row-->
+
 </div>
 <!--end top-nav-bar-->
 
-<div class="row stories-flyout-container">
-<div class="row">
-    <div class="twelve columns">
-        <div class="stories-inner-nav">
-            <dl class="tabs">
-                <dd class="active"><a href="#featured">FEATURED</a></dd>
-                <dd><a href="#social">SOCIAL</a></dd>
-                <dd><a href="#environmental">ENVIRONMENTAL</a></dd>
-                <dd><a href="#economic">ECONOMIC</a></dd>
-                <dd><a href="#all">ALL</a></dd>
-             </dl>
-             <ul class="tabs-content">
-             	<li class="active" id="featuredTab">
-                    <div id="featuredContent">
-                      <div>
-                        <img src="images/video-thumbnail.png"/>
-                      </div>
-                      <div>
-                        <img src="images/video-thumbnail.png"/>
-                      </div>
-                      <div>
-                        <img src="images/video-thumbnail.png"/>
-                      </div>
-                    </div>
-                </li>
-                <li id="socialTab">social</li>
-                <li id="environmentalTab">environmental</li>
-                <li id="economicTab">economic</li>
-                <li id="allTab">all</li>
-             </ul>
+
+<div class="stories-flyout-container">
+    <div class="tabs-background">
+    	<div class="row">
+        	<div class="stories-inner-nav">
+                <div class="twelve columns">
+                    <dl class="tabs">
+                        <dd class="active"><a href="#featured">FEATURED</a></dd>
+                        <dd><a href="#social">SOCIAL</a></dd>
+                        <dd><a href="#environmental">ENVIRONMENTAL</a></dd>
+                        <dd><a href="#economic">ECONOMIC</a></dd>
+                        <dd class="tabs-item-last"><a href="#all">ALL</a></dd>
+                     </dl>
+                </div>
+                <!--end twelve columns-->
+            </div>
+            <!--end stories-inner-nav-->
         </div>
-        <!--end stories-inner-nav-->
+        <!--end row-->
     </div>
+    <!--end tabs-background-->
+    <div class="row tabs-content-row">
+                 <ul class="tabs-content">
+                    <li class="active" id="featuredTab">
+                        <div id="featuredContent">
+                          <div>
+                          	<div class="row tabs-content-slider-row">
+                            	<div class="tabs-content-slider-link">
+                                <img src="images/video-thumbnail01.png"/>
+                                <div class="tabs-image-caption">
+                                	<img src="images/icon.png"/>
+                                	<h4>TITLE OF STORY</h4>
+                                    <p>Subject of Subhead</p>
+                                </div>
+                                </div>
+                                <img src="images/video-thumbnail02.png"/>
+                                <img src="images/video-thumbnail03.png"/>
+                            </div>
+                            <div class="row tabs-content-slider-row">
+                                <img src="images/video-thumbnail01.png"/>
+                                <img src="images/video-thumbnail02.png"/>
+                                <img src="images/video-thumbnail03.png"/>
+                            </div>
+                            <!--end row-->
+                          </div>
+                          <!--end Featured tab content-->
+                          <div>
+                            <img src="images/video-thumbnail.png"/>
+                          </div>
+                          <div>
+                            <img src="images/video-thumbnail.png"/>
+                          </div>
+                        </div>
+                    </li>
+                    <li id="socialTab">social</li>
+                    <li id="environmentalTab">environmental</li>
+                    <li id="economicTab">economic</li>
+                    <li id="allTab">all</li>
+                 </ul>
+              </div>
+
+  </div>
+  <!--end row-->
 </div>
-</div>
-<!--end row stories-flyout-->
+<!--end stories-flyout-container-->
 
 <div class="row body-container">
     <div class="twelve columns">
