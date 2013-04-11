@@ -18,8 +18,8 @@
   <script src="javascripts/modernizr.foundation.js"></script>
   <script>
   		$(window).load(function() {
-		   $('#featuredContentSlider').orbit({ fluid: '16x6', animation: 'horizontal-slide', timer: 'false'});
-		   $('#allContentSlider').orbit({ fluid: '16x6', animation: 'horizontal-slide', timer: 'false'});
+		   $('#featuredContentSlider').orbit({ fluid: '16x6', animation: 'fade', timer: 'false'});
+		   $('#allContentSlider').orbit({ fluid: '16x6', animation: 'fade', timer: 'false'});
 	   });
   		$(document).ready(function() {
 			var openDiv;
@@ -37,7 +37,9 @@
 			$(".clicker").click(function(){
 			  toggleDiv('.stories-flyout-container');
 			});
-
+			$(".close-flyout").click(function(){
+			  toggleDiv('.stories-flyout-container');
+			});
 		});
   </script>
 </head>
@@ -75,6 +77,7 @@
                         <dd><a href="#economic">ECONOMIC</a></dd>
                         <dd class="tabs-item-last"><a href="#all">ALL</a></dd>
                      </dl>
+                     <a class="close-flyout">&#215;</a>
                 </div>
                 <!--end twelve columns-->
             </div>

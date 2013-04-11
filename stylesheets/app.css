@@ -61,6 +61,20 @@ h3 {
 	width:100%;
 	background:rgba(51,51,51,.85);
 }
+.close-flyout {
+	font-size: 3em;
+	line-height: .5; 
+	position: absolute; 
+	top: 8px; 
+	right: 11px; 
+	color: #aaa; 
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6); 
+	font-weight: bold; 
+	cursor: pointer;
+}
+.close-flyout:hover {
+	color:#fff;	
+}
 /*Tabs for Stories flyout-----------------------*/
 .stories-inner-nav {
 	position:relative;
